@@ -40,7 +40,7 @@ const Input = () => {
         </NameContainer>
         <textarea placeholder="Escribe algo..." value={mensaje} onChange={(e) => setMensaje(e.target.value)}></textarea>
         <ButtonContainer>
-          <button type="submit">POSTEAR</button>
+          <button type="submit">POSTEAR👻</button>
         </ButtonContainer>
       </form>
     </CardContainer>

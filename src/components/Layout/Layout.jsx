@@ -5,6 +5,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { startLoading, fetchCommentsSuccess, fetchCommentsError, } from '../../redux/commentSlice';
 import Card from '../Card/Card';
+import { BiLogoReact } from "react-icons/bi"
+import { SiTypescript } from "react-icons/si"
+
 
 const Layout = () => {
   const dispatch = useDispatch();
@@ -42,9 +45,12 @@ const Layout = () => {
               return <Card key={el.timestamp} name={el.nombre} comment={el.msg} timestamp={new Date(el.createdAt).toLocaleString('es-ES')} mg={el.mg} msg={el.msg} createdAt={el.createdAt}/>
             })
           }
-          <h1>Made with ❤️ by Axel Quintana</h1>
+          <h4>Fake tw 👻 | Es anonimo!</h4>
+
+          
       </Container>
     </MainContainer>
+    
   )
 }
 
