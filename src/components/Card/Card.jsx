@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { AiFillHeart } from 'react-icons/ai';
 import axios from 'axios';
 
-
 const Card = ({name, comment, timestamp, mg, msg, createdAt}) => {
   const [active, setActive] = useState(false);
   const [likeSent, setLikeSent] = useState(false);

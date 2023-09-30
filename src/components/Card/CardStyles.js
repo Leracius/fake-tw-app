@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const CommentContainer = styled.div`
     border-bottom: 3px solid #545454;
-    width: 90%;
+    width: 96%;
     h1{
         color: #545454;
     }

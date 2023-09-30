@@ -8,7 +8,6 @@ export const CardContainer = styled.div`
     justify-content: center; 
     @media only screen and (max-width: 600px) {
         width: 95%;
-        border: 2px solid white;
     }
     
     form{
@@ -25,7 +24,12 @@ export const CardContainer = styled.div`
             outline: none; 
             resize: none; 
             overflow: hidden;
-            
+            padding: 3px;
+            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+            @media only screen and (max-width: 600px) {
+                border: none;
+                background-color: #141414e0;
+            }
         }
     }
 `
