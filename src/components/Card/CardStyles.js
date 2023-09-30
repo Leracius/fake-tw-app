@@ -18,8 +18,9 @@ export const CommentContainer = styled.div`
     }
     button{
         background-color: transparent;
-        &:hover{
-            color: tomato;
-        }
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 5px;
     }
 `

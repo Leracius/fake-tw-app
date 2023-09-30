@@ -16,13 +16,18 @@ const Layout = () => {
             dispatch(startLoading());
             const response = await axios.get('https://api-102.vercel.app/comments');
             dispatch(fetchCommentsSuccess(response.data));
-            console.log('Datos recibidos:', response.data);
           } catch (error) {
             dispatch(fetchCommentsError(error.message));
-            console.error('Error al realizar la solicitud:', error);
           }
         };
         fetchData();
+
+        const intervalId = setInterval(() => {
+            fetchData();
+          }, 3000);
+            return () => {
+            clearInterval(intervalId); 
+          };
   }, [dispatch])
 
   const commentArray = data?.comments || [];
@@ -34,9 +39,10 @@ const Layout = () => {
         <Input />
           {
             arrCommentReversed.map((el)=>{
-              return <Card key={el.timestamp} name={el.nombre} comment={el.msg} timestamp={new Date(el.createdAt).toLocaleString('es-ES')} />
+              return <Card key={el.timestamp} name={el.nombre} comment={el.msg} timestamp={new Date(el.createdAt).toLocaleString('es-ES')} mg={el.mg} msg={el.msg} createdAt={el.createdAt}/>
             })
           }
+          <h1>Made with ❤️ by Axel Quintana</h1>
       </Container>
     </MainContainer>
   )

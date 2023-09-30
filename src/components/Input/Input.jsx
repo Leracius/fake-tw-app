@@ -5,21 +5,27 @@ import { useState } from 'react';
 
 const Input = () => {
 
+
   const [nombre, setNombre] = useState('');
   const [mensaje, setMensaje] = useState('');
 
+
   const handleSubmit = async (e) => {
+    e.preventDefault()
+
     try {
-      const response = await axios.post('https://api-102.vercel.app/comments', {
-        nombre: nombre,
-        msg: mensaje,
-        createdAt: new Date(),
-        mg: 0
-      });
 
-      console.log('Respuesta:', response.data);
+      if(nombre && mensaje){
+        const response = await axios.post('https://api-102.vercel.app/comments', {
+          nombre: nombre,
+          msg: mensaje,
+          createdAt: new Date(),
+          mg: 0
+        });
+      }
 
-      // Puedes hacer algo con la respuesta si es necesario
+      setNombre('');
+      setMensaje('');
     } catch (error) {
       console.error('Error al hacer la solicitud:', error);
     }

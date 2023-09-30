@@ -12,4 +12,7 @@ export const Container = styled.div`
     padding: 3px;
     width: 500px;
     min-height: 40px;
+    @media only screen and (max-width: 600px) {
+        width: 100vw;
+    }
 `

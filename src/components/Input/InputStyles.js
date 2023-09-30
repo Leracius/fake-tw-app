@@ -3,10 +3,14 @@ import styled from "styled-components";
 export const CardContainer = styled.div`
     margin: 10px;
     border-radius: 10px;
-    width: 500px;
     background-color: #262626;
     display: flex;
-    justify-content: center;   
+    justify-content: center; 
+    @media only screen and (max-width: 600px) {
+        width: 95%;
+        border: 2px solid white;
+    }
+    
     form{
         display: flex;
         flex-direction: column;
@@ -21,15 +25,16 @@ export const CardContainer = styled.div`
             outline: none; 
             resize: none; 
             overflow: hidden;
+            
         }
     }
 `
 export const NameContainer = styled.div`
-    width: 490px;
     display: flex;
     justify-content: flex-start;
-    padding: 0;
+    padding: 0 5px 0 5px;
     color: #545454;
+    
     input{
         border: none;
         outline: none;
@@ -37,11 +42,13 @@ export const NameContainer = styled.div`
         padding-left: 10px;
         font-weight: 700;
         background-color: transparent;
+        @media only screen and (max-width: 600px) {
+        width: 80%;
+    }
     }
 `
 
 export const ButtonContainer = styled.div`
-    width: 500px;
     display: flex;
     justify-content: end;
     button{
