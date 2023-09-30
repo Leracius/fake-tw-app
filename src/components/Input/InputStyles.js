@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const CardContainer = styled.div`
     margin: 10px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     background-color: #262626;
     display: flex;
     justify-content: center; 
     @media only screen and (max-width: 600px) {
-        width: 95%;
+        width: 100%;
     }
     
     form{
@@ -24,7 +24,6 @@ export const CardContainer = styled.div`
             outline: none; 
             resize: none; 
             overflow: hidden;
-            padding: 3px;
             font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
             @media only screen and (max-width: 600px) {
                 border: none;
